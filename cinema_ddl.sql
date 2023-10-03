@@ -2,10 +2,10 @@ CREATE DATABASE IF NOT EXISTS cinema_system;
 
 USE cinema_system;
 
-CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'AdminIsHere';
+CREATE USER IF NOT EXISTS 'Admin'@'localhost' IDENTIFIED BY 'AdminIsHere';
 GRANT ALL PRIVILEGES ON cinema_system.* TO 'Admin'@'localhost';
 
-CREATE USER 'User'@'localhost' IDENTIFIED BY 'UserIsHere';
+CREATE USER IF NOT EXISTS 'User'@'localhost' IDENTIFIED BY 'UserIsHere';
 GRANT SELECT ON cinema_system.* TO 'User'@'localhost';
 
 CREATE TABLE IF NOT EXISTS roles(
